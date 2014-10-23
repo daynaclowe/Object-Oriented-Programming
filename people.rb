@@ -1,4 +1,4 @@
-#require "pry"
+require "pry"
 
 class Person
 	attr_accessor :name
@@ -24,11 +24,16 @@ class Instructor < Person
 	end
 end
 
-instructor = Person.new("Chris")
-student = Person.new("Christina")
-
 instructor = Instructor.new("Chris")
 student = Student.new("Christina")
 
+puts instructor.greeting
+puts student.greeting
 
-#binding.pry
+puts instructor.teach #can call on the teach method because it is within the class it was initialized to
+puts student.learn
+
+puts student.teach #can't inherit a method from another class unless it has been specified as such ie. if we used the < to inherit it could, or if those methods were in people we they could be accessed.
+puts instructor.learn
+
+binding.pry
