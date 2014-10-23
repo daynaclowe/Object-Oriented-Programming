@@ -27,13 +27,13 @@ end
 instructor = Instructor.new("Chris")
 student = Student.new("Christina")
 
-puts instructor.greeting
-puts student.greeting
+instructor.greeting
+student.greeting
 
-puts instructor.teach #can call on the teach method because it is within the class it was initialized to
-puts student.learn
+instructor.teach #can call on the teach method because it is within the class it was initialized to
+student.learn
 
-puts student.teach #can't inherit a method from another class unless it has been specified as such ie. if we used the < to inherit it could, or if those methods were in people we they could be accessed.
-puts instructor.learn
+student.teach #can't inherit a method from another class unless it has been specified as such ie. if we used the < to inherit it could, or if those methods were in people we they could be accessed.
+instructor.learn
 
 binding.pry
