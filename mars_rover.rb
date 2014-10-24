@@ -60,32 +60,18 @@ end
 rover = Rover.new(0,0,"N")
 puts "Rover's current position is #{rover.x}, #{rover.y}, facing #{rover.direction}"
 
-# rover2 = Rover.new(5,5,"S")
+# puts "Please provide a direction: L or R, or M for move."
+# user_input = gets.chomp.capitalize
+# rover.read_instruction(user_input)
+# puts "Rover's new position is #{rover.x}, #{rover.y}, facing #{rover.direction}"
+# note: replaced above with while loop
 
-puts "Please provide a direction: L or R, or M for move."
-user_input = gets.chomp.capitalize
-rover.read_instruction(user_input)
+while true
+user_input = gets.chomp
+rover.read_instructions(user_input)
 puts "Rover's new position is #{rover.x}, #{rover.y}, facing #{rover.direction}"
-
-puts "Please provide a direction: L or R, or M for move."
-user_input = gets.chomp.capitalize
-rover.read_instruction(user_input)
-puts "Rover's new position is #{rover.x}, #{rover.y}, facing #{rover.direction}"
-
-puts "Please provide a direction: L or R, or M for move."
-user_input = gets.chomp.capitalize
-rover.read_instruction(user_input)
-puts "Rover's new position is #{rover.x}, #{rover.y}, facing #{rover.direction}"
-
-puts "Please provide a direction: L or R, or M for move."
-user_input = gets.chomp.capitalize
-rover.read_instruction(user_input)
-puts "Rover's new position is #{rover.x}, #{rover.y}, facing #{rover.direction}"
-
-puts "Please provide a direction: L or R, or M for move."
-user_input = gets.chomp.capitalize
-rover.read_instruction(user_input)
-puts "Rover's new position is #{rover.x}, #{rover.y}, facing #{rover.direction}"
+puts rover
+end
 
 
 
